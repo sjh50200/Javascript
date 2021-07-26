@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>object oriented program</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var grades = {
+			'list' : {"jonghyeon": 10, "taehyeon": 6, "minjun": 80},
+			'show' : function(){
+				for (var name in this.list){
+					console.log(name, this.list[name]);
+				} //일반 형식 출력
+				console.log(this.list); //객체 형식 출력
+			}
+		}
+		grades.show();
+		//grades.['show'](); 와 같음
+	</script>
+</body>
+</html>
