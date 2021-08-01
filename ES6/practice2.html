@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>pt2</title>
+</head>
+<body>
+<ul>
+<script type="text/javascript">
+	const SETTING = {
+		name : "LUCKY LOTTO!",
+		count : 6,
+		maxNumber : 45
+	}
+
+	function getRandomNumber(maxNumber) {
+		let set = new Set();
+
+		while(set.size !== SETTING.count) {
+			let randomNumber = Math.floor(Math.random() * maxNumber) + 1;
+			console.log(randomNumber);
+			set.add(randomNumber);
+		}
+
+		set.forEach(function(value) {
+			document.write("<li>"+ value +"</li>");
+		})
+		return set;
+	}
+
+	console.log(getRandomNumber(SETTING.maxNumber));
+</script>
+</ul>
+</body>
+</html>
